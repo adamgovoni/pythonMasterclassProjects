@@ -1,11 +1,12 @@
 import random
 
+# list of possible exits
 available_exits = ["north", "south", "east", "west"]
 
+# one of the exits is chosen at random and saved here
 random_exit = random.choice(available_exits)
 
-print(random_exit)
-
+# variable starts as am empty string to initiate the while loop
 guessed_exit = ""
 
 # intro, instructions
@@ -14,6 +15,7 @@ print("Only one direction is correct and it has been chosen at random.")
 print("Your choices are simple.  North, south, east, west, or quit.")
 print("Good luck adventurer...")
 
+#while loop continues until correct answer received or player enters quit
 while guessed_exit != random_exit:
     guessed_exit = input("Please choose a direction: ")
     if guessed_exit.casefold() == "quit":
@@ -22,3 +24,6 @@ while guessed_exit != random_exit:
 
 else:
     print("aren't you glad you got out of there")
+
+# need to add a counter for tracking incorrect guesses
+# add random death/game over endings for too many wrong guesses
