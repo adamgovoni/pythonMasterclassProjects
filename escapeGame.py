@@ -16,14 +16,14 @@ print("Your choices are simple.  North, south, east, west, or quit.")
 print("Good luck adventurer...")
 
 #while loop continues until correct answer received or player enters quit
-while guessed_exit != random_exit:
+while guessed_exit.casefold() != random_exit:
     guessed_exit = input("Please choose a direction: ")
     if guessed_exit.casefold() == "quit":
         print("Game over")
         break
 
 else:
-    print("aren't you glad you got out of there")
+    print("Congratulations you've escaped! Aren't you glad you got out of there?")
 
 # need to add a counter for tracking incorrect guesses
 # add random death/game over endings for too many wrong guesses
